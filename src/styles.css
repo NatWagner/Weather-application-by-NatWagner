@@ -111,7 +111,8 @@ ul {
 }
 
 .footer,
-.coder {
+.coder,
+.open-source-link {
   text-align: center;
   font-size: 10px;
 }
