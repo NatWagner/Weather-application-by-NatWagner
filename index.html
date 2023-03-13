@@ -38,6 +38,7 @@
                 placeholder="Type a location ..."
                 autocomplete="off"
                 autofocus="on"
+                class="search-text-input"
                 id="search-text-input"
               />
               <input type="submit" value="Search" />
@@ -47,46 +48,42 @@
             </form>
           </div>
         </header>
-
+        <br />
         <section>
-          <div class="row">
-            <div class="col-5">
-              <div class="row todays-weather-row">
-                <div class="col-6 temp-display">
-                  <span class="current-temp" id="current-temp"></span>
-                </div>
-                <div class="col-2">
-                  <span class="units">
-                    <a href="#" class="celsius" id="celsius-link">°C</a>
-                    <span> / </span>
-                    <a href="#" class="fahrenheit" id="fahrenheit-link">°F</a>
-                  </span>
-                </div>
-                <div class="col-4">
-                  <i class="fa-solid fa-sun current-weather-icon"></i>
-                </div>
-              </div>
-              <div class="row todays-max-min-temp-row">
-                <div class="col-3 todays-max-temp-display">
-                  <span class="current-max-temp" id="current-max-temp">
-                    <strong>17</strong>
-                  </span>
-                </div>
-                <div class="col-3 todays-min-temp-display">
-                  <span class="current-min-temp" id="current-min-temp">6</span>
-                </div>
-                <div class="col-6"></div>
-              </div>
-              <ul>
-                <li class="current-date" id="date"></li>
-                <hr />
-                <li id="condition"></li>
-                <li>Humidity: <span id="humidity"></span> %</li>
-                <li>Wind: <span id="windSpeed"></span> km|h</li>
-              </ul>
+          <div class="row todays-weather-row">
+            <div class="col-6 temp-display">
+              <span class="current-temp" id="current-temp"></span>
             </div>
-            <div class="col-7"></div>
+            <div class="col-2 c-f-units">
+              <span class="units">
+                <a href="#" class="celsius" id="celsius-link">°C</a>
+                <span> / </span>
+                <a href="#" class="fahrenheit" id="fahrenheit-link">°F</a>
+              </span>
+            </div>
+            <div class="col-3 icon">
+              <i class="fa-solid fa-sun current-weather-icon"></i>
+            </div>
+            <div class="col-1"></div>
           </div>
+          <div class="row todays-max-min-temp-row">
+            <div class="col-3 todays-max-temp-display">
+              <span class="current-max-temp" id="current-max-temp">
+                <strong>17</strong>
+              </span>
+            </div>
+            <div class="col-3 todays-min-temp-display">
+              <span class="current-min-temp" id="current-min-temp">6</span>
+            </div>
+            <div class="col-8"></div>
+          </div>
+          <ul>
+            <li class="current-date" id="date"></li>
+            <hr />
+            <li id="condition"></li>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="windSpeed"></span> km|h</li>
+          </ul>
         </section>
 
         <section>

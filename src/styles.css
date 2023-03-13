@@ -51,14 +51,20 @@ ul {
 .search-form {
   text-align: right;
 }
+
+.search-text-input {
+  width: 150px;
+}
+
 .todays-weather-row {
   text-align: center;
   height: 68px;
 }
 
-.col-2,
-.col-4 {
-  padding: 0;
+.c-f-units,
+.icon {
+  text-align: left;
+  padding-right: 0;
 }
 
 .temp-display {
