@@ -67,13 +67,9 @@ ul {
   padding-right: 0;
 }
 
-.temp-display {
-  position: relative;
-  top: -25px;
-}
-
 .current-temp {
   font-size: 80px;
+  line-height: 1;
 }
 
 .current-degrees {
