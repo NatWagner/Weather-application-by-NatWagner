@@ -76,8 +76,7 @@ ul {
   font-size: 75px;
 }
 
-.current-weather-icon {
-  padding: 10px;
+.current-icon {
   border: 1.5px solid;
   border-color: black;
   border-radius: 20px;
