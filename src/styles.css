@@ -20,6 +20,7 @@ h1 {
 
 a {
   font-size: 15px;
+  color: black;
 }
 
 ul {
@@ -113,9 +114,11 @@ ul {
 
 .footer,
 .coder,
-.open-source-link {
+.open-source-link,
+.netlify-link {
   text-align: center;
   font-size: 10px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
