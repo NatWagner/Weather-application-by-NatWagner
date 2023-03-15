@@ -61,6 +61,7 @@ ul {
 .temp-display {
   border: 1.5px solid black;
   border-radius: 20px;
+  margin-right: 7px;
 }
 
 .current-temp {
