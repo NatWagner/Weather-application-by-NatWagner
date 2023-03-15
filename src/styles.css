@@ -58,15 +58,19 @@ ul {
   height: 68px;
 }
 
-.c-f-units,
-.icon {
-  text-align: left;
-  padding-right: 0;
+.temp-display {
+  border: 1.5px solid black;
+  border-radius: 20px;
 }
 
 .current-temp {
   font-size: 80px;
   line-height: 1;
+}
+
+.icon {
+  text-align: left;
+  margin-left: 7px;
 }
 
 .weather-conditions .celsius {
@@ -76,8 +80,7 @@ ul {
 }
 
 .current-icon {
-  border: 1.5px solid;
-  border-color: black;
+  border: 1.5px solid black;
   border-radius: 20px;
   color: #ff702a;
 }
