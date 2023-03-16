@@ -50,7 +50,8 @@ let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
 //forecast
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
@@ -80,29 +81,15 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
-//Button - location icon - current Geolocation
-function getCurrentPosition(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(showPosition);
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "e450bc345a80a08ada69fd5c714d871d";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
-function showPosition(position) {
-  let unit = "metric";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
-  let apiKey = "5f94bb4cb0471f5d3ec1dfdfec61e362";
-  let apiUrl = `${apiEndpoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
-
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
-}
-
-let button = document.querySelector("#button");
-button.addEventListener("click", getCurrentPosition);
 
 //Current Weather API for searched location
 function showTemperature(response) {
-  displayForecast();
-
   celsiusTemperature = response.data.main.temp;
 
   document.querySelector("#location-input").innerHTML = response.data.name;
@@ -123,6 +110,8 @@ function showTemperature(response) {
   document
     .querySelector("#current-icon")
     .setAttribute("alt", response.data.weather[0].main);
+
+  getForecast(response.data.coord);
 }
 
 function searchedLocation(city) {
@@ -133,6 +122,25 @@ function searchedLocation(city) {
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 }
+
+//Button - location icon - current Geolocation
+function getCurrentPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(showPosition);
+}
+function showPosition(position) {
+  let unit = "metric";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather";
+  let apiKey = "5f94bb4cb0471f5d3ec1dfdfec61e362";
+  let apiUrl = `${apiEndpoint}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unit}`;
+
+  axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
+}
+
+let button = document.querySelector("#button");
+button.addEventListener("click", getCurrentPosition);
 
 //Search bar
 function search(event) {
