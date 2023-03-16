@@ -49,6 +49,37 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
+//forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <img
+                  src=""
+                  alt="Clear Sky"
+                  class="forecast-icon"
+                  id="forecast-icon"
+                />
+                <div class="weekday">${day}</div>
+                <div class="forecast-temperatures">
+                  <span class="forecast-max-temp">8° </span>
+                  <span class="forecast-min-temp"> 2°</span>
+                </div>
+              </div>
+            `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //Button - location icon - current Geolocation
 function getCurrentPosition(event) {
   event.preventDefault();
@@ -70,6 +101,8 @@ button.addEventListener("click", getCurrentPosition);
 
 //Current Weather API for searched location
 function showTemperature(response) {
+  displayForecast();
+
   celsiusTemperature = response.data.main.temp;
 
   document.querySelector("#location-input").innerHTML = response.data.name;
