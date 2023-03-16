@@ -76,15 +76,15 @@ ul {
   text-align: left;
 }
 
-.icon {
-  text-align: left;
-  margin-left: 7px;
-}
-
 .weather-conditions .celsius {
   color: black;
   cursor: default;
   text-decoration: none;
+}
+
+.icon {
+  text-align: left;
+  margin-left: 7px;
 }
 
 .current-icon {
@@ -102,22 +102,20 @@ ul {
   font-size: 20px;
 }
 
-.fa-cloud-sun,
-.fa-sun {
-  color: #ff702a;
-  font-size: 45px;
+.forecast {
+  text-align: center;
 }
 
 .weekday {
   color: #ff702a;
 }
 
-.forecast {
-  text-align: center;
+.forecast-max-temp {
+  font-weight: bold;
 }
 
-.highest-temp,
-.lowest-temp {
+.forecast-max-temp,
+.forecast-min-temp {
   color: #ffff;
 }
 
