@@ -56,16 +56,13 @@ button,
   margin: 5px auto;
 }
 
-.search-form {
+.search-form,
+.temp-display {
   text-align: right;
 }
 
 .search-text-input {
   width: 230px;
-}
-
-.temp-display {
-  text-align: right;
 }
 
 .current-temp {
@@ -78,10 +75,6 @@ button,
   border-radius: 20px;
   font-size: 80px;
   line-height: normal;
-}
-
-.units {
-  text-align: left;
 }
 
 .todays-weather-conditions .celsius {
@@ -98,6 +91,7 @@ button,
   font-size: 18px;
 }
 
+.units,
 .forecast {
   text-align: center;
 }
