@@ -56,29 +56,27 @@ ul {
   width: 230px;
 }
 
-.todays-weather-row {
-  text-align: center;
-  height: 68px;
-}
-
-.temp-display,
-.current-icon {
-  border: 1.5px solid black;
-  border-radius: 20px;
-  margin-right: 7px;
+.temp-display {
+  text-align: right;
 }
 
 .current-temp {
-  font-size: 500%;
+  font-size: 80px;
   line-height: normal;
 }
 
-.units,
-.icon {
+.current-icon {
+  border: 1.5px solid black;
+  border-radius: 20px;
+  font-size: 80px;
+  line-height: normal;
+}
+
+.units {
   text-align: left;
 }
 
-.weather-conditions .celsius {
+.todays-weather-conditions .celsius {
   color: black;
   cursor: default;
   text-decoration: none;
