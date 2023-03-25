@@ -5,7 +5,7 @@ body {
 
 input,
 button {
-  border-color: #ff702a;
+  border-style: inherit;
   border-radius: 12px;
   padding: 5px;
 }
@@ -38,11 +38,11 @@ ul {
 }
 
 .weather-app {
-  background-image: url(https://images.pexels.com/photos/13258325/pexels-photo-13258325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2v);
+  background-image: url("../background/sunset rural/sunset-rural-landscape4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border: 1.5px solid #ff702a;
-  border-style: inset;
+  border: 1.5px solid #ec6e4c;
+  border-style: double;
   border-radius: 20px;
   padding: 20px;
   margin: 5px auto;
@@ -91,7 +91,7 @@ ul {
 }
 
 .weekday {
-  color: #ff702a;
+  color: #ec6e4c;
 }
 
 .forecast-max-temp {
