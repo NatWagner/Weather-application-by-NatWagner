@@ -33,6 +33,12 @@ ul {
   padding-inline-start: 0;
 }
 
+button,
+.current-icon,
+.forecast {
+  filter: saturate(150%);
+}
+
 .container {
   width: 60%;
   margin: auto;
