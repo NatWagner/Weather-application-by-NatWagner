@@ -19,7 +19,7 @@ button {
 
 h1 {
   font-size: 40px;
-  margin-top: 15px;
+  margin: 15px 0 10px 0;
 }
 
 a {
@@ -29,7 +29,7 @@ a {
 
 ul {
   list-style-type: none;
-  margin: 20px 0;
+  margin-bottom: 20px;
   font-weight: 500;
   padding-inline-start: 0;
 }
@@ -43,7 +43,6 @@ button,
 .container {
   width: 60%;
   margin: auto;
-  padding-right: 0;
 }
 
 .weather-app {
@@ -88,10 +87,6 @@ button,
   margin-left: 7px;
 }
 
-.current-date {
-  font-size: 18px;
-}
-
 .date-description {
   font-size: 9px;
 }
@@ -131,7 +126,7 @@ button,
 
 @media screen and (max-width: 768px) {
   .container {
-    width: 95%;
+    width: 100%;
   }
 
   h1 {
