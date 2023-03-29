@@ -46,7 +46,7 @@ button,
 }
 
 .weather-app {
-  background-image: url("../background/sunset rural/sunset-rural-landscape.jpg");
+  background-image: url("../images/background/sunset rural/sunset-rural-landscape.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border: 1.5px solid #ec6e4c;
