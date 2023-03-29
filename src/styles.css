@@ -77,6 +77,8 @@ button,
   border-radius: 20px;
   font-size: 100px;
   box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.3);
+  animation: zoomIn;
+  animation-duration: 3500ms;
 }
 
 .todays-weather-conditions {
