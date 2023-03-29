@@ -69,7 +69,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-              <div class="col">
+              <div class="col forecast-col">
                 <img
                   src="http://openweathermap.org/img/wn/${
                     forecastDay.weather[0].icon
@@ -142,6 +142,7 @@ function getCurrentPosition(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showPosition);
 }
+
 function showPosition(position) {
   let unit = "metric";
   let lat = position.coords.latitude;
