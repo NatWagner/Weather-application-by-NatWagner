@@ -121,7 +121,7 @@ button,
 }
 
 .forecast-col:hover {
-  background-color: #cbaaa5;
+  background-color: rgba(203, 170, 165, 0.5);
   border-radius: 15px;
 }
 
