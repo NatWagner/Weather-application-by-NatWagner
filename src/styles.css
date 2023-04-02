@@ -113,7 +113,8 @@ button,
   margin-left: 7px;
 }
 
-.date-description {
+.date-description,
+.local-time-description {
   font-size: 9px;
 }
 
