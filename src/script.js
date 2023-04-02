@@ -11,14 +11,15 @@ function formatDate(currentDate) {
   ];
   let day = days[currentDate.getDay()];
   let date = currentDate.getDate();
-  if (date === 1) {
+  if ((date = 1 || 21 || 31)) {
     date = `${date}st`;
   }
-  if (date === 2) {
+  if ((date = 2 || 22)) {
     date = `${date}nd`;
   } else {
     date = `${date}th`;
   }
+
   let months = [
     "Jan",
     "Feb",
@@ -42,7 +43,7 @@ function formatDate(currentDate) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${day}, ${month} ${date}, ${hours}.${minutes}`;
+  return `${day}, ${month} ${date}, ${hours}:${minutes}`;
 }
 
 let dateElement = document.querySelector("#date");
