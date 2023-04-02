@@ -167,30 +167,6 @@ function search(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
-//Fahrenheit
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElements = document.querySelector("#current-temp");
-
-  celsiusLink.classList.remove("celsius");
-  fahrenheitLink.classList.add("celsius");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElements.innerHTML = Math.round(fahrenheitTemperature);
-}
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-//Celsius
-function convertToCelsius(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("celsius");
-  fahrenheitLink.classList.remove("celsius");
-  let temperatureElements = document.querySelector("#current-temp");
-  temperatureElements.innerHTML = Math.round(celsiusTemperature);
-}
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-
 let celsiusTemperature = null;
 
 //location shown when reload(default location)

@@ -86,6 +86,10 @@ button,
   line-height: normal;
 }
 
+.celsius {
+  font-size: 25px;
+}
+
 .current-icon {
   border: 1.5px solid black;
   border-radius: 20px;
@@ -113,7 +117,7 @@ button,
   font-size: 9px;
 }
 
-.units,
+.unit,
 .forecast {
   text-align: center;
 }
