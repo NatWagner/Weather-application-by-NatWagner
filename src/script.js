@@ -42,24 +42,6 @@ let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
 
-////local time of searched location
-
-//function httpGetAsync(url, callback) {
-//const xmlHttp = new XMLHttpRequest();
-// xmlHttp.onreadystatechange = function () {
-//   if (xmlHttp.readyState === 4 && xmlHttp.status === 200)
-//     callback(xmlHttp.responseText);
-// };
-//xmlHttp.open("GET", url, true); // true for asynchronous
-// xmlHttp.send(null);
-//}
-//const apiKey = "1e287da020c7447fac549f9373ffe91b";
-//const url =
-//  "https://timezone.abstractapi.com/v1/convert_time?api_key=1e287da020c7447fac549f9373ffe91b&base_location=Bern,CH&base_datetime=2023-04-02,04:00:00&target_location=Oxford,UK";
-
-//let localTimeElement = document.querySelector("#local-time");
-//localTimeElement.innerHTML = httpGetAsync(url);
-
 //forecast
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
